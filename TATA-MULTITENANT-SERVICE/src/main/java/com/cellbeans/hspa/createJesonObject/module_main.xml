@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_main" default="compile.module.main">
+    <dirname property="module.main.basedir"
+             file="/com/cellbeans/hspa/createJesonObject/module_main.xml"/>
+
+    <property name="module.jdk.home.main" value=""/>
+    <property name="module.jdk.bin.main" value=""/>
+    <property name="module.jdk.classpath.main" value=""/>
+
+    <property name="compiler.args.main"
+              value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+
+    <property name="main.output.dir"
+              value="${module.main.basedir}/../../out/production/main"/>
+    <property name="main.testoutput.dir"
+              value="${module.main.basedir}/../../out/test/main"/>
+
+    <path id="main.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="main.module.production.classpath"/>
+
+    <path id="main.runtime.production.module.classpath">
+        <pathelement location="${main.output.dir}"/>
+    </path>
+
+    <path id="main.module.classpath">
+        <pathelement location="${main.output.dir}"/>
+    </path>
+
+    <path id="main.runtime.module.classpath">
+        <pathelement location="${main.testoutput.dir}"/>
+        <pathelement location="${main.output.dir}"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.main">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.main">
+        <patternset refid="excluded.from.module.main"/>
+    </patternset>
+
+
+    <target name="compile.module.main"
+            depends="compile.module.main.production,compile.module.main.tests"
+            description="Compile module main"/>
+
+    <target name="compile.module.main.production"
+            depends="register.custom.compilers"
+            description="Compile module main; production classes"/>
+
+    <target name="compile.module.main.tests"
+            depends="register.custom.compilers,compile.module.main.production"
+            description="compile module main; test classes" unless="skip.tests"/>
+
+    <target name="clean.module.main" description="cleanup module">
+        <delete dir="${main.output.dir}"/>
+        <delete dir="${main.testoutput.dir}"/>
+    </target>
+</project>

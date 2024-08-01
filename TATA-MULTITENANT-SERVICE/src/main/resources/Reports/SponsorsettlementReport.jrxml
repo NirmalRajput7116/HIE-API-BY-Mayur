@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SponsorsettlementReport" pageWidth="1440" pageHeight="612" orientation="Landscape" columnWidth="1400" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c88e2d3a-980d-4fa4-8962-ae237d995947">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="bill_number" class="java.lang.String"/>
+	<field name="created_date" class="java.lang.String"/>
+	<field name="class_name" class="java.lang.String"/>
+	<field name="br_reciept_number" class="java.lang.String"/>
+	<field name="ReceiptDate" class="java.lang.String"/>
+	<field name="MRNO" class="java.lang.String"/>
+	<field name="user_firstname" class="java.lang.String"/>
+	<field name="user_lastname" class="java.lang.String"/>
+	<field name="CompanyType" class="java.lang.String"/>
+	<field name="CompanyName" class="java.lang.String"/>
+	<field name="Credit" class="java.lang.String"/>
+	<field name="CompanyDiscount" class="java.lang.String"/>
+	<field name="CompanyPaidAmt" class="java.lang.String"/>
+	<field name="CompanyBalance" class="java.lang.String"/>
+	<field name="UserName" class="java.lang.String"/>
+	<field name="unit_name" class="java.lang.String"/>
+	<field name="objHeaderData.unitAddress" class="java.lang.String"/>
+	<field name="objHeaderData.unitcenter" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateCountryId.countryName" class="java.lang.String"/>
+	<field name="objHeaderData.unitName" class="java.lang.String"/>
+	<field name="objHeaderData.unitpostfix" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="753" y="0" width="106" height="35" uuid="8a009f4f-50a3-4ce1-ac40-36e82cce6840"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Credit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="0" width="166" height="35" uuid="8537565c-a5b8-41c9-919a-8624194c8d2b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Receipt Details	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="543" y="0" width="104" height="35" uuid="9267fb80-bfcd-405b-9be5-78f2450369b2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Company Type	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="0" width="125" height="35" uuid="1eec54dc-b4ca-4215-b103-63f0c4598ba0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Patient Particular	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="859" y="0" width="108" height="35" uuid="714f1df9-9bdb-4d73-8e33-6bce90eee861"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="647" y="0" width="106" height="35" uuid="bc735802-cf15-4071-b11a-907b6df1e2b1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Company Name	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="75" height="35" uuid="65fd010b-ad5c-4214-af55-67f0e6794a0e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sr No.	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="0" width="177" height="35" uuid="67cfb991-2256-49ce-903e-078c71a05319"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Bill Particulars	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="967" y="0" width="108" height="35" uuid="6a9c2401-1b8e-42a2-8908-fe1e5592be32"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Company Paid Amt	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1075" y="0" width="108" height="35" uuid="2e37f07b-c924-41ce-93c3-9ca6e8062252"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Company Balance Amt	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1183" y="0" width="108" height="35" uuid="f6f7e0e6-c5aa-486d-a37f-2a28c2e8c279"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[User Name	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1291" y="0" width="109" height="35" uuid="bf54502c-9292-4c2e-8bd7-98ef6db5e85a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Unit Name
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="75" height="40" uuid="2254105c-d5d5-4c18-9c1c-8b3dab2a9593"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="177" height="40" uuid="0c72c625-17c5-403c-ab59-983d8180eb91"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bill_number} +"\n"+ $F{created_date}+"\n"+$F{class_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="0" width="166" height="40" uuid="c2a262c2-d390-465d-8053-f552d694a44d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{br_reciept_number}+"\n"+$F{ReceiptDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="0" width="125" height="40" uuid="060f6a2d-2a8d-4714-aca1-1b5911701693"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_firstname}+" "+$F{user_lastname}+"\n"+$F{MRNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="543" y="0" width="104" height="40" uuid="a1db0b66-cb15-4a69-bac6-288f68c5f85c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CompanyType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="647" y="0" width="106" height="40" uuid="d3da943f-a797-4964-a538-8d86e621ef3a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CompanyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="753" y="0" width="106" height="40" uuid="1cde34da-f4b1-48b6-bb43-f711f47d374e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Credit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="859" y="0" width="108" height="40" uuid="98b93fab-cc3b-430a-a832-f4822cc295b1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CompanyDiscount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="967" y="0" width="108" height="40" uuid="909a50dd-5554-49a2-8f3d-00b70a726f31"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CompanyPaidAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1075" y="0" width="108" height="40" uuid="a0c9925c-b50f-4d6f-ab95-f817a8d93576"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CompanyBalance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1183" y="0" width="108" height="40" uuid="34e4f3ee-88d7-4f3d-9c63-32aeaba81537"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{UserName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1291" y="0" width="109" height="40" uuid="cd9faff0-a9dc-4500-81a8-58e2a9dba272"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{unit_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="1280" y="0" width="78" height="18" uuid="2ee4f145-61e3-4d8c-8a66-2c86f732fc6c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page No. "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

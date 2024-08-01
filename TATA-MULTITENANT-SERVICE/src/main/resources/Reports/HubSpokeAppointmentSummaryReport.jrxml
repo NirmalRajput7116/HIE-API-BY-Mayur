@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HubSpokeAppointmentSummaryReport" pageWidth="1224" pageHeight="595" orientation="Landscape" columnWidth="1184" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b9df1ae-6174-4fec-98b7-80eb7363ac06">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateCountryId.countryName" class="java.lang.String"/>
+	<field name="objHeaderData.unitAddress" class="java.lang.String"/>
+	<field name="objHeaderDataUser.userFirstname" class="java.lang.String"/>
+	<field name="objHeaderDataUser.userTitleId.titleName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityName" class="java.lang.String"/>
+	<field name="objHeaderDataUser.userLastname" class="java.lang.String"/>
+	<field name="objHeaderData.unitcenter" class="java.lang.String"/>
+	<field name="objHeaderData.unitName" class="java.lang.String"/>
+	<field name="objHeaderData.unitpostfix" class="java.lang.String"/>
+	<field name="appointment_date" class="java.lang.String"/>
+	<field name="unit_name" class="java.lang.String"/>
+	<field name="isVirtual" class="java.lang.String"/>
+	<field name="cluster_name" class="java.lang.String"/>
+	<field name="booked_app" class="java.lang.String"/>
+	<field name="arrived_app" class="java.lang.String"/>
+	<field name="Doctor_name" class="java.lang.String"/>
+	<field name="finalized_count" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="320" y="22" width="347" height="20" uuid="d74cc316-1679-4209-bf1c-d9885260c0a4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitcenter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="210" y="6" width="578" height="20" forecolor="#58281D" uuid="e80550d1-b3fa-40e8-9cb7-35d4a92ccdd9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitName}+' '+$F{objHeaderData.unitpostfix}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="58" width="128" height="20" uuid="84314dde-988e-4964-b8eb-b520654725de"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="778" y="58" width="77" height="20" uuid="c7bbafe2-fdd9-46e4-ad28-36ffac82af93"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Date & Time:-]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss ">
+				<reportElement x="855" y="58" width="129" height="20" uuid="f0870160-076e-4b42-a7ae-154b9ee2356b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="567" y="59" width="114" height="19" uuid="6e350a82-50fd-4614-bafb-632335c1fcfc"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityStateId.stateCountryId.countryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="42" width="368" height="17" uuid="fa13e953-24ea-46fd-b87d-564c44a26533"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="59" width="137" height="19" uuid="794a17c7-bf03-4503-8883-ff45ad97a1de"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityStateId.stateName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="304" y="0" width="433" height="25" uuid="8ab18742-08cf-40b5-a1d8-d85834331abd"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HUB Spoke Appointment Summary Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="70" height="30" uuid="e8d81114-c1ad-45ee-861a-9f8a0b58c6b8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sr.No.	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="0" width="102" height="30" uuid="52bd6814-26c7-4039-b728-da08a3ec54d1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="0" width="200" height="30" uuid="d440f276-800f-4bb7-9f45-1d59c9be90f3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Appointment From Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="0" width="104" height="30" uuid="56f837a9-333d-40f1-a431-2b8443913bc0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Consultant Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="200" height="30" uuid="6eb8f070-db47-4277-8835-c158420e49b7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[HUB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="0" width="200" height="30" uuid="71e10985-6602-43c9-a557-471022d59b26"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Clinician]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="877" y="0" width="96" height="30" uuid="11eb1d5a-a9e3-4f95-98ce-a11a26c6a5cb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Booked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="973" y="0" width="106" height="30" uuid="2a6b00b1-01a4-4a6d-83e4-c09ab164f341"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Arrived]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1079" y="0" width="105" height="30" uuid="aeb91c31-9de3-4045-9fad-87e8d373e6ae"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[EMR Finalized]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="70" height="32" uuid="6ba5bb16-92ff-4696-9b5c-3e7e6b2b41bd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="0" width="102" height="32" uuid="abbcfd2b-9a57-4198-861f-5626207bb144"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{appointment_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="0" width="200" height="32" uuid="ac472cb4-50ca-456e-aacb-f40579490804"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{unit_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="104" height="32" uuid="9b6b5e1f-bf39-44c0-a18c-3ce168a90e3a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{isVirtual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="200" height="32" uuid="424af096-f867-418c-945e-deaae266e19c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cluster_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="677" y="0" width="200" height="32" uuid="3f8ac6e9-5c79-4ad7-80cc-5db88e279755"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Doctor_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="877" y="0" width="96" height="32" uuid="672e1c6d-21b0-4806-b337-5e7eed994928"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{booked_app}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="973" y="0" width="106" height="32" uuid="c4cc8c81-da6b-4d47-8758-8006ce9c84cd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{arrived_app}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1079" y="0" width="105" height="32" uuid="0a557fe1-7615-49cc-8910-658c2226e0e1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{finalized_count}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="1003" y="0" width="76" height="18" uuid="3276303f-ae19-4c3f-97ab-77c3ee654edd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page No. "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

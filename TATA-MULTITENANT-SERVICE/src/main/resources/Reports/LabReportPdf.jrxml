@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LabReportPdf" pageWidth="576" pageHeight="792" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="210fdf0e-17dc-415c-8d87-fd1f2568569f">
+	<property name="ireport.zoom" value="1.8150000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="objHeaderData.unitName" class="java.lang.String"/>
+	<field name="objHeaderData.unitAddress" class="java.lang.String"/>
+	<field name="titleName" class="java.lang.String"/>
+	<field name="sampleNumber" class="java.lang.String"/>
+	<field name="patientMrNo" class="java.lang.String"/>
+	<field name="ReportDateTime" class="java.lang.String"/>
+	<field name="userMobile" class="java.lang.String"/>
+	<field name="genderName" class="java.lang.String"/>
+	<field name="userAge" class="java.lang.String"/>
+	<field name="userFirstname" class="java.lang.String"/>
+	<field name="userLastname" class="java.lang.String"/>
+	<title>
+		<band height="75" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" x="3" y="0" width="532" height="23" uuid="23ec275e-6184-4c0e-90e2-9287369f5f35"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Report Details]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="128" width="528" height="1" uuid="be1d1d2a-244f-4716-96e0-6d97e2420240"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="25" width="100" height="16" uuid="069e2084-6f52-4f4a-9498-1e1a579b85ba"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[MR Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="39" width="100" height="15" uuid="0391a63e-c49c-457f-9dd0-fcc2deb87ee4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="53" width="100" height="15" uuid="949cf388-d6a3-487b-aa1d-bb3e835c7403"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age / Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="67" width="100" height="15" uuid="42ecc269-ad29-49e6-a751-657e9255858f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Doctor Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="81" width="100" height="15" uuid="dccc8f65-531b-460a-94d1-dd61d7bbbe5b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="25" width="137" height="15" uuid="74469fd7-4215-4687-bbd1-bffc8bf192f4"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="53" width="137" height="15" uuid="5cf1eb4c-456c-4fa9-9f9d-579c65ed346a">
+					<printWhenExpression><![CDATA[$F{userAge}+" / "+$F{genderName}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="39" width="137" height="15" uuid="9a8d945f-0c13-4d43-b5c1-eb9cb7328cc0">
+					<printWhenExpression><![CDATA[$F{titleName}+" "+$F{userFirstname}+" "+$F{userLastname}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="67" width="137" height="15" uuid="e7d8c3a0-14a2-46de-85d9-6aa13644c982"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="81" width="137" height="15" uuid="1d0ee016-b8ab-4aaa-a241-85f2a3008dc9">
+					<printWhenExpression><![CDATA[$F{userMobile}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="27" width="131" height="15" uuid="c12dc049-9641-4744-bb18-f663a8f2bcbe"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Sample Collection Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="41" width="131" height="15" uuid="0a623b45-9fe8-4aa5-8979-dff382b4de38"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Sample Acceptance Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="55" width="132" height="15" uuid="46002df0-1aec-413f-ae7b-af34e625265d"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Report Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="69" width="132" height="15" uuid="ce19eab9-03d9-4ef0-b1fc-c6cb56711d7a"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Sample Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="27" width="131" height="15" uuid="7e721949-a8d3-4001-872c-e233eb5e5db4"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="41" width="131" height="15" uuid="9849f522-f79f-46b6-ad87-4c6be106273a"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="55" width="131" height="15" uuid="5726f913-63ab-4062-b944-05e364c54568">
+					<printWhenExpression><![CDATA[$F{ReportDateTime}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="69" width="131" height="15" uuid="8c55294e-2b87-42da-aaf6-25bf2c1416ce">
+					<printWhenExpression><![CDATA[$F{sampleNumber}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" x="7" y="109" width="528" height="19" uuid="ff6ed2a6-ce2d-4e82-8b72-d2a174c0bdd4"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="1" width="196" height="31" uuid="3f5df96c-5da9-4831-882e-5a05198543d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Parameter]]></text>
+			</staticText>
+			<line>
+				<reportElement x="6" y="0" width="1" height="31" uuid="f88108bc-4b8e-45c1-b78a-353c4120e78a"/>
+			</line>
+			<line>
+				<reportElement x="7" y="31" width="529" height="1" uuid="92174157-03d0-4091-9f9a-9e4a424fa881"/>
+			</line>
+			<staticText>
+				<reportElement x="205" y="1" width="135" height="31" uuid="e5452a5f-8168-46d2-bdc1-9dfc20c0c960"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="1" width="194" height="31" uuid="bb8eb3a6-9794-4d34-b25d-a92a76fd233a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Referral Range]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="0" width="197" height="19" uuid="1514011b-9479-45b1-a9be-e5201a8253ba"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="137" height="19" uuid="6a2e252d-fb80-428d-a004-49a702751519"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="-1" width="195" height="19" uuid="791223a4-8a37-44cb-b1ea-9d028a167adb"/>
+				<textElement>
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="426" y="32" width="80" height="18" uuid="e6988f44-da83-4551-81ca-094349324800"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page No. "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

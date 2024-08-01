@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InventoryIndentListReportSubListOfItems" language="groovy" pageWidth="1449" pageHeight="555" orientation="Landscape" columnWidth="1449" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="16a2df5d-677b-4ab3-8b34-fbfbdef3d39e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="562" y="0" width="296" height="20" uuid="8b551b81-1e08-472d-9608-bc404af2bb98"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indent List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="93" height="46" uuid="9485d071-3227-409c-aee1-77f36da5ce05"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1184" y="0" width="100" height="46" uuid="0f1281a3-bd9d-4321-8bde-adbb9bbdea70"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approve]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="0" width="165" height="46" uuid="a25c6f0d-daf5-4e77-bf1d-29fd23ec9964"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Central Store Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1284" y="0" width="1" height="46" uuid="64e129ec-2f85-4ce6-a980-d4a31bcf6a89"/>
+			</line>
+			<staticText>
+				<reportElement x="93" y="0" width="165" height="46" uuid="4b652ebf-4ac2-48e5-a42c-d78714f3a50a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indent No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="165" height="46" uuid="007f10b5-c58b-4334-b2d7-a8a43b0a24ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Login Store Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="918" y="0" width="165" height="46" uuid="87d2e6ce-8918-4618-8e61-f89f12d7bf1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="258" y="0" width="1" height="46" uuid="684f3be9-d793-4794-bd49-d0add106c1ac"/>
+			</line>
+			<staticText>
+				<reportElement x="258" y="0" width="165" height="46" uuid="c1e79978-1901-4ca4-9304-3aaf2aa9d2ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="1448" height="1" uuid="bc3eb8b2-f5f9-4ea7-86cb-2bb5de6e34b8"/>
+			</line>
+			<line>
+				<reportElement x="1448" y="0" width="1" height="46" uuid="88e5d01c-8ce4-4d19-9cd5-ab9470c00a5b"/>
+			</line>
+			<line>
+				<reportElement x="93" y="0" width="1" height="46" uuid="7f908fe6-8f86-4e10-980b-58a2852e734f"/>
+			</line>
+			<line>
+				<reportElement x="423" y="0" width="1" height="46" uuid="a5079770-6382-4a6e-8548-3c10f81937c9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1449" height="1" uuid="3bfab4a4-550a-430e-8dc0-1fabdfa43668"/>
+			</line>
+			<staticText>
+				<reportElement x="753" y="0" width="165" height="46" uuid="530638b6-638e-422d-b5c1-c147bdc63f68"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indent Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="918" y="0" width="1" height="46" uuid="616443a1-372c-4ab5-8f83-9f6c68eb44ab"/>
+			</line>
+			<staticText>
+				<reportElement x="1284" y="0" width="165" height="46" uuid="845b8237-9fb4-4c54-88dc-11058d36e0c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remark]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1184" y="0" width="1" height="46" uuid="5a46a8f4-0dcd-4167-bdea-ab0b62d5b890"/>
+			</line>
+			<line>
+				<reportElement x="753" y="0" width="1" height="46" uuid="cd24b336-36b7-47ee-9608-857f75628342"/>
+			</line>
+			<line>
+				<reportElement x="588" y="0" width="1" height="46" uuid="0b61f7f3-24b1-464c-b287-d65ffaabb59f"/>
+			</line>
+			<staticText>
+				<reportElement x="1083" y="0" width="101" height="46" uuid="de8ebcc5-fc19-4e20-996b-888d12e86e1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Freeze Indent]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="1" height="46" uuid="5c788f9a-69ee-405a-8ad6-b10df5d27d0d"/>
+			</line>
+			<line>
+				<reportElement x="1083" y="0" width="1" height="46" uuid="87db5cd0-7251-4c78-b107-a126671bfb0f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+</jasperReport>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="labOrderCountReport" pageWidth="1152" pageHeight="612" orientation="Landscape" columnWidth="1112" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b6ac6d7-c40b-40cd-a955-9848e6b50961">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="objHeaderData.unitAddress" class="java.lang.String"/>
+	<field name="objHeaderData.unitName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityName" class="java.lang.String"/>
+	<field name="objHeaderData.unitcenter" class="java.lang.String"/>
+	<field name="objHeaderData.unitpostfix" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateName" class="java.lang.String"/>
+	<field name="objHeaderData.unitCityId.cityStateId.stateCountryId.countryName" class="java.lang.String"/>
+	<field name="SampleCollected" class="java.lang.String"/>
+	<field name="unit_name" class="java.lang.String"/>
+	<field name="SampleAccepted" class="java.lang.String"/>
+	<field name="SampleRejected" class="java.lang.String"/>
+	<field name="Finlazed" class="java.lang.String"/>
+	<field name="Submission" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement x="681" y="36" width="97" height="19" uuid="454224e4-ed65-4e6b-91ab-3d225d432664"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityStateId.stateCountryId.countryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="260" y="0" width="578" height="20" forecolor="#58281D" uuid="90825440-1883-41f8-9114-8b81181290fa"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitName}+' '+$F{objHeaderData.unitpostfix}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="370" y="16" width="347" height="20" uuid="d9ae3779-54bb-4589-97b8-fd10d8914901"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitcenter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="38" width="289" height="17" uuid="1b634900-ed6f-40c3-abeb-97cd2b3dc51a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="575" y="36" width="85" height="20" uuid="9fceab01-b7b8-4a08-8876-a9551f82ba1b"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="621" y="36" width="83" height="19" uuid="75bd5b75-10c9-4b9c-95f5-78640accbb33"/>
+				<textFieldExpression><![CDATA[$F{objHeaderData.unitCityId.cityStateId.stateName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss ">
+				<reportElement x="930" y="67" width="182" height="20" uuid="07e11fc2-ee2e-4693-afca-c4309dca7cc0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="800" y="67" width="130" height="20" uuid="c6229f9f-10b1-4068-9d0b-4e5a194b7cf4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Date & Time:-]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="370" y="0" width="367" height="25" uuid="604c118d-b285-4a7e-9db5-3572b554f1c2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Count Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="406" y="0" width="207" height="32" uuid="b6882d13-6ff4-4abd-9e7f-13066c0ca849"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample Acceptance Count	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="184" height="32" uuid="f7d89871-443d-4acb-8bed-77d0f0a3a374"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="613" y="0" width="199" height="32" uuid="d799a370-c10f-4276-830f-1fb898361cb8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample Rejection Count	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="76" height="32" uuid="ec41a5cb-ee23-4162-ba6d-5a3f563d3d02"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr. No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="146" height="32" uuid="5ff8254d-e53f-4233-9d76-8e962e98d23b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample Collection Count	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="812" y="0" width="157" height="32" uuid="636a3d58-b416-4e6b-82b6-d7e77604e2a2"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Finalized Count	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="969" y="0" width="143" height="32" uuid="fdb76a04-22f6-44d0-8fb9-24da2e97d610"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Submission Count
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="406" y="0" width="207" height="30" uuid="f6991a3e-7b2b-49ee-9434-07a2d95a9296"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SampleAccepted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="76" height="30" uuid="af8accca-4bec-4fa7-9061-07f845b7d1ff"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="146" height="30" uuid="c07ebb57-c76a-4f2f-b411-65d6d2476184"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SampleCollected}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="613" y="0" width="199" height="30" uuid="c6b9ab52-c7d1-4644-ae49-8d6aca93c896"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SampleRejected}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="812" y="0" width="157" height="30" uuid="cf0ed5d0-f29e-4ef7-b3ec-00a9b0a9b557"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Finlazed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="969" y="0" width="143" height="30" uuid="3e1624ce-d210-41f6-af32-e129a1222886"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Submission}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="0" width="184" height="30" uuid="d20d7b7f-b990-4c34-9e9a-8ed8aa703416"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{unit_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="990" y="0" width="76" height="23" uuid="23372803-d693-4d90-af6d-3e8f7cbc0a41"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page No. "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
